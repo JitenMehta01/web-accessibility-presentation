@@ -1,0 +1,21 @@
+.section-slides{
+  top:0;
+}
+
+.flex-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.section-slides .flex-container p{
+  font-size: 20px;
+}
+
+.image-container{
+  display:flex;
+  justify-content: space-around;
+}
+
+.image-container svg{
+  width:125px;
+}
