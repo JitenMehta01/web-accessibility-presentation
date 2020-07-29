@@ -2,6 +2,22 @@
   top:0;
 }
 
+a{
+  color:#005eb8;
+}
+
+img{
+  width:80%;
+}
+
+li {
+  list-style: square;
+}
+
+li::marker{
+  color:#005eb8
+}
+
 .flex-container{
   display: flex;
   flex-direction: column;
@@ -18,4 +34,82 @@
 
 .image-container svg{
   width:125px;
+}
+
+.highlight-line{
+  background-color:#005eb8;
+}
+
+.highlight-line td div span span, 
+.highlight-line .hljs-tag{
+  color:#fff;
+}
+
+
+
+
+.highlight-line .hljs-string, 
+.highlight-line .hljs-keyword, 
+.highlight-line .hljs-ln-line, 
+.highlight-line .hljs-comment{
+  color:yellow;
+  font-weight: 800;
+}
+
+.semantic-html .highlight-line .hljs-name, 
+.semantic-html .highlight-line .hljs-attr{
+  color:yellow;
+  font-weight: 800;
+}
+
+.semantic-html .flex-container
+
+{
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.semantic-html svg{
+width:70px;
+margin-right:15px;
+fill:#00ab66;
+}
+
+.semantic-html h3{
+  margin-bottom:0;
+}
+
+.slides section:nth-child(3) section:nth-child(2) svg{
+  fill:#cf142b;
+}
+
+.section-slides .image-container, 
+.wcag-level-container{
+  display:flex;
+}
+
+.wcag-level-container{
+  justify-content: space-between;
+}
+
+.level{
+  flex:1;
+  padding:60px 40px;
+  border: 5px solid #005eb8;
+  border-radius: 10px;
+}
+
+.wcag-level-container .level:nth-child(2){
+  margin: 0 30px;
+}
+
+.level h4{
+  margin:0;
+  color:#005eb8;
+}
+
+
+.manual-testing ul li:not(:last-child){
+  margin-bottom:15px;
 }

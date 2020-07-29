@@ -4,28 +4,503 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>NHS Web Accessibilty Presentation - Jiten Mehta</title>
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
 		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
 
+		<!-- cusomtized stylesheet by jiten mehta-->
+		<link rel="stylesheet" href="css\customize.css">
+
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+
+		<!-- Appearence plugin stylesheets -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
+		<link rel="stylesheet" href="plugin\appearance\plugin\appearance\appearance.css">
+
+
+
 	</head>
 	<body>
+
+	<!-- nhs svg logo -->
+	<svg xmlns="http://www.w3.org/2000/svg" role="presentation" focusable="false" style = 'display:none;'>
+		<symbol id = 'nhsuk-logo'  viewBox="0 0 40 16">
+			<path fill="#fff" d="M0 0h40v16H0z"></path>
+			<path fill="#005eb8" d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6"></path>
+		</symbol>
+	</svg>
+	<!-- // nhs svg logo -->
+
+	<!-- switch icon -->
+	<svg xmlns="http://www.w3.org/2000/svg" role='assistive-tech-switch-control' focusable="false" style='display:none'>
+		<symbol id = 'switch-control' viewBox="0 0 512 512">
+			<path fill = '#005eb8' d="M376.5 120.5h-241C60.785 120.5 0 181.285 0 256s60.785 135.5 135.5 135.5h241c74.715 0 135.5-60.785 135.5-135.5s-60.785-135.5-135.5-135.5zm0 241C318.327 361.5 271 314.174 271 256c0-58.172 47.327-105.5 105.5-105.5S482 197.828 482 256c0 58.174-47.327 105.5-105.5 105.5z"/>
+		</symbol>
+	</svg>
+
+	<!-- // switch icon -->
+
+	<!-- speaker icon -->
+	<svg xmlns="http://www.w3.org/2000/svg" role='assistive-tech-screen-reader' focusable="false" style='display:none'>
+		<symbol id = 'screen-reader' viewBox="0 0 480 480">
+			<path fill = '#005eb8' d="M278.944 17.577c-5.568-2.656-12.128-1.952-16.928 1.92L106.368 144.009H32c-17.632 0-32 14.368-32 32v128c0 17.664 14.368 32 32 32h74.368l155.616 124.512A16.158 16.158 0 00272 464.009c2.368 0 4.736-.544 6.944-1.6a15.968 15.968 0 009.056-14.4v-416a16.05 16.05 0 00-9.056-14.432zm90.048 109.28c-6.304-6.208-16.416-6.112-22.624.128-6.208 6.304-6.144 16.416.128 22.656C370.688 173.513 384 205.609 384 240.009s-13.312 66.496-37.504 90.368c-6.272 6.176-6.336 16.32-.128 22.624a15.943 15.943 0 0011.36 4.736c4.064 0 8.128-1.536 11.264-4.64C399.328 323.241 416 283.049 416 240.009s-16.672-83.232-47.008-113.152z"/>
+			<path fill = '#005eb8' d="M414.144 81.769c-6.304-6.24-16.416-6.176-22.656.096-6.208 6.272-6.144 16.416.096 22.624C427.968 140.553 448 188.681 448 240.009s-20.032 99.424-56.416 135.488c-6.24 6.24-6.304 16.384-.096 22.656 3.168 3.136 7.264 4.704 11.36 4.704 4.064 0 8.16-1.536 11.296-4.64C456.64 356.137 480 299.945 480 240.009s-23.36-116.128-65.856-158.24z"/>
+		</symbol>
+	</svg>
+	<!-- // speaker icon -->
+
+	<!-- keyboard icon -->
+	<svg xmlns="http://www.w3.org/2000/svg" role='assistive-tech-keyboard' focusable="false" style='display:none'>
+		<symbol id = 'keyboard' viewBox="0 0 480 480"> 
+			<path fill = '#005eb8' d="M482 201H300.268C317.865 182.888 335 156.009 335 120c0-35.445 8.214-46.562 15.371-52.287C361.361 58.921 381.602 55 416 55c8.284 0 15-6.716 15-15s-6.716-15-15-15c-42.803 0-67.247 5.588-84.371 19.287C308.027 63.169 305 94.668 305 120c0 46.583-41.523 74.289-52.895 81H30c-16.542 0-30 13.458-30 30v226c0 16.542 13.458 30 30 30h452c16.542 0 30-13.458 30-30V231c0-16.542-13.458-30-30-30zm-162 64h16c8.284 0 15 6.716 15 15s-6.716 15-15 15h-16c-8.284 0-15-6.716-15-15s6.716-15 15-15zm-40 64h16c8.284 0 15 6.716 15 15s-6.716 15-15 15h-16c-8.284 0-15-6.716-15-15s6.716-15 15-15zm-40-64h16c8.284 0 15 6.716 15 15s-6.716 15-15 15h-16c-8.284 0-15-6.716-15-15s6.716-15 15-15zm-24 64c8.284 0 15 6.716 15 15s-6.716 15-15 15h-16c-8.284 0-15-6.716-15-15s6.716-15 15-15zm-56-64h16c8.284 0 15 6.716 15 15s-6.716 15-15 15h-16c-8.284 0-15-6.716-15-15s6.716-15 15-15zm-80 0h16c8.284 0 15 6.716 15 15s-6.716 15-15 15H80c-8.284 0-15-6.716-15-15s6.716-15 15-15zm16 158H80c-8.284 0-15-6.716-15-15s6.716-15 15-15h16c8.284 0 15 6.716 15 15s-6.716 15-15 15zm24-64c-8.284 0-15-6.716-15-15s6.716-15 15-15h16c8.284 0 15 6.716 15 15s-6.716 15-15 15zm232 64H160c-8.284 0-15-6.716-15-15s6.716-15 15-15h192c8.284 0 15 6.716 15 15s-6.716 15-15 15zm24-64h-16c-8.284 0-15-6.716-15-15s6.716-15 15-15h16c8.284 0 15 6.716 15 15s-6.716 15-15 15zm9-79c0-8.284 6.716-15 15-15h16c8.284 0 15 6.716 15 15s-6.716 15-15 15h-16c-8.284 0-15-6.716-15-15zm47 143h-16c-8.284 0-15-6.716-15-15s6.716-15 15-15h16c8.284 0 15 6.716 15 15s-6.716 15-15 15z"/>
+		</symbol>
+	</svg>
+	<!-- // keyboard icon -->
+
+	<!-- colour contrast icon -->
+	<svg  xmlns="http://www.w3.org/2000/svg" role='assistive-tech-colur-contrast' focusable="false" style='display:none'>
+		<symbol id = 'colour-contrast' viewBox="0 -9 388.09 388">
+			<path fill = '#007f3b' d="M194.86 10.637c101.03 0 183.23 78.258 183.23 174.441 0 96.18-82.2 174.438-183.23 174.438h-1.051V10.636zm0 0" fill="#00acea"/>
+			<path d="M193.809 359.516v.59C93.449 360.105 10 281.585 10 185.077c0-96.511 83.45-175.03 183.809-175.03v.59c-100.547.539-182.18 78.59-182.18 174.441 0 95.848 81.633 173.899 182.18 174.438zm0 0" fill="#fedb41"/>
+			<path fill = '#005eb8' d="M193.809 10.637v348.879c-100.547-.54-182.18-78.59-182.18-174.438 0-95.851 81.633-173.902 182.18-174.441zm0 0" fill="#fedb41"/>
+			<path fill = '#fff' d="M57.387 316.04a197.25 197.25 0 00136.422 54.065c1.175 0 2.336-.21 3.437-.617 105.45-1.226 190.844-83.472 190.844-184.41C388.09 84.137 302.695 1.891 197.246.664a10.014 10.014 0 00-3.437-.617 197.253 197.253 0 00-136.422 54.07C20.383 89.223 0 135.734 0 185.078c0 49.34 20.383 95.852 57.387 130.961zM368.14 185.077c0 87.82-73.282 159.785-164.282 164.223V20.85c91 4.438 164.282 76.403 164.282 164.227zM71.176 68.625A177.833 177.833 0 01183.859 20.32v329.516a177.858 177.858 0 01-112.683-48.309c-32.985-31.293-51.153-72.652-51.153-116.449 0-43.8 18.168-85.16 51.153-116.453zm0 0" fill="#083863"/>
+		</symbol>
+	</svg>
+	<!-- // colour contrast icon -->
+
+	<!-- check icon -->
+	<svg xmlns="http://www.w3.org/2000/svg" role='correct-HTML-semantic' focusable="false" style='display:none'>
+		<symbol id = 'check-icon' viewBox="0 0 426.667 426.667">
+		<path d="M421.876 56.307c-6.548-6.78-17.352-6.968-24.132-.42-.142.137-.282.277-.42.42L119.257 334.375l-90.334-90.334c-6.78-6.548-17.584-6.36-24.132.42-6.388 6.614-6.388 17.099 0 23.713l102.4 102.4c6.665 6.663 17.468 6.663 24.132 0L421.456 80.44c6.78-6.549 6.968-17.353.42-24.133z"/>
+		</symbol>
+	</svg>
+		
+	<!-- // check icon -->
+
+	<!-- cross icon -->
+	<svg xmlns="http://www.w3.org/2000/svg" role='cross-HTML-semantic' focusable="false" style='display:none'>
+		<symbol id = 'cross-icon' viewBox="0 0 512.001 512.001">
+		<path d="M284.286 256.002L506.143 34.144c7.811-7.811 7.811-20.475 0-28.285-7.811-7.81-20.475-7.811-28.285 0L256 227.717 34.143 5.859c-7.811-7.811-20.475-7.811-28.285 0-7.81 7.811-7.811 20.475 0 28.285l221.857 221.857L5.858 477.859c-7.811 7.811-7.811 20.475 0 28.285a19.938 19.938 0 0014.143 5.857 19.94 19.94 0 0014.143-5.857L256 284.287l221.857 221.857c3.905 3.905 9.024 5.857 14.143 5.857s10.237-1.952 14.143-5.857c7.811-7.811 7.811-20.475 0-28.285L284.286 256.002z"/>
+		</symbol>
+	</svg>
+	
+	<!-- // cross icon -->
+
+	<!-- eye icon -->
+	<svg xmlns="http://www.w3.org/2000/svg" role='eye-icon-wcag' focusable="false" style='display:none'>
+		<symbol id = 'eye-icon' viewBox="0 0 512 512">
+			<path fill = '#005eb8' d="M508.177 245.995C503.607 240.897 393.682 121 256 121S8.394 240.897 3.823 245.995a15.002 15.002 0 000 20.01C8.394 271.103 118.32 391 256 391s247.606-119.897 252.177-124.995a15.004 15.004 0 000-20.01zM256 361c-57.891 0-105-47.109-105-105s47.109-105 105-105 105 47.109 105 105-47.109 105-105 105z"/>
+			<path fill = '#005eb8' d="M271 226c0-15.09 7.491-28.365 18.887-36.53C279.661 184.235 268.255 181 256 181c-41.353 0-75 33.647-75 75s33.647 75 75 75c37.024 0 67.668-27.034 73.722-62.358C299.516 278.367 271 255.522 271 226z"/>
+		</symbol>
+	</svg>
+	<!-- // eye icon -->
+
+	<!-- brain icon -->
+	<svg xmlns="http://www.w3.org/2000/svg" role='brain-icon-wcag' focusable="false" style='display:none'>
+		<symbol id = 'brain-icon' viewBox="0 0 512 512">		
+			<path fill = '#005eb8' d="M306 83c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10-4.48-10-10-10zM206 83c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10-4.48-10-10-10z"/>
+			<path fill = '#005eb8' d="M473.123 298.882C481.706 286 486 269.927 486 256c0-20.996-9.327-40.503-25.332-53.731C464.21 193.805 466 185.002 466 176c0-27.855-16.256-53.803-40.425-65.92 3.667-30.414-16.151-58.292-45.52-65.403C368.56 18.104 342.975 0 316 0c-25.11 0-47.631 14.646-60 36.016C243.63 14.646 221.109 0 196 0c-26.977 0-52.562 18.104-64.055 44.678-29.545 7.156-49.177 35.173-45.52 65.402C62.257 122.196 46 148.145 46 176c0 9.002 1.79 17.805 5.332 26.269C35.327 215.498 26 235.004 26 256c0 14 4.33 30.052 12.877 42.881C30.525 310.671 26 324.644 26 339c0 18.616 7.548 36.35 20.899 49.518C40.035 430.01 73.125 472 116 472c.31 0 .615-.005.914-.014C131.129 496.508 157.515 512 186 512c29.688 0 56.216-17.82 70-43.494C269.784 494.18 296.312 512 326 512c28.485 0 54.871-15.492 69.086-40.014.3.009.604.014.914.014 37.944 0 70-33.43 70-73 0-3.369-.296-6.834-.899-10.482C478.452 375.35 486 357.617 486 339c0-14.356-4.525-28.329-12.877-40.118zM246 151.381A39.741 39.741 0 00226 146c-5.523 0-10 4.477-10 10s4.477 10 10 10c11.028 0 20 8.972 20 20v190.169C231.329 359.528 209.877 349 186 349c-5.523 0-10 4.477-10 10s4.477 10 10 10c33.084 0 60 26.916 60 60 0 34.149-27.477 63-60 63-23.152 0-44.465-13.691-54.299-34.88a10.005 10.005 0 00-10.2-5.726c-.707.081-1.41.175-2.113.271-28.46 3.892-60.51-28.335-51.834-64.387a9.999 9.999 0 00-3.326-10.025C52.644 367.614 46 353.671 46 339c0-9.071 2.565-17.948 7.338-25.732C65.332 323.098 80.251 329 96 329c5.523 0 10-4.477 10-10s-4.477-10-10-10c-27.139 0-50-24.77-50-53 0-17.125 8.729-32.879 23.352-42.142a10 10 0 003.347-13.38C68.254 192.639 66 184.403 66 176c0-26.99 22.002-53 50-53 26.636 0 50 24.767 50 53 0 5.523 4.477 10 10 10s10-4.477 10-10c0-39.57-32.056-73-70-73-3.348 0-6.678.271-9.975.784-.005-.263-.025-.519-.025-.784 0-22.317 18.117-40 40-40 10.682 0 20.73 4.161 28.292 11.715 3.907 3.903 10.238 3.899 14.142-.007 3.903-3.908 3.9-10.239-.007-14.142-9.123-9.113-20.662-14.925-33.167-16.851C164.079 30.624 178.744 20 196 20c26.636 0 50 24.766 50 53v78.381zM416 329c15.75 0 30.669-5.903 42.663-15.729C463.435 321.054 466 329.93 466 339c0 14.671-6.644 28.614-18.227 38.253a9.997 9.997 0 00-3.326 10.025c1.06 4.403 1.553 8.128 1.553 11.721 0 31.04-28.075 56.126-53.387 52.666a92.449 92.449 0 00-2.114-.271 9.993 9.993 0 00-10.199 5.726C370.466 478.309 349.151 492 326 492c-32.523 0-60-28.851-60-63 0-33.084 26.916-60 60-60 5.522 0 10-4.477 10-10s-4.478-10-10-10c-23.877 0-45.329 10.528-60 27.169V186c0-11.028 8.972-20 20-20 5.522 0 10-4.477 10-10s-4.478-10-10-10a39.741 39.741 0 00-20 5.381V73c0-28.234 23.364-53 50-53 17.256 0 31.92 10.624 40.739 23.714-12.504 1.926-24.042 7.738-33.166 16.851-3.908 3.903-3.912 10.234-.009 14.142 3.903 3.908 10.236 3.911 14.142.008C345.271 67.161 355.318 63 366 63c21.993 0 40 17.787 40 40 0 .264-.02.521-.025.784A64.843 64.843 0 00396 103c-37.944 0-70 33.43-70 73 0 5.523 4.478 10 10 10s10-4.477 10-10c0-28.233 23.364-53 50-53 27.982 0 50 25.997 50 53 0 8.403-2.254 16.639-6.699 24.478a10 10 0 003.348 13.38C457.271 223.121 466 238.875 466 256c0 28.331-22.941 53-50 53-5.522 0-10 4.477-10 10s4.478 10 10 10z"/>
+			<path fill = '#005eb8' d="M223.453 214.053c-3.682-4.116-10.003-4.468-14.12-.786C177.265 241.952 126 219.027 126 176c0-5.523-4.477-10-10-10s-10 4.477-10 10c0 34.715 25.407 63.595 58.6 69.057C160.75 257.185 149.386 266 136 266c-5.523 0-10 4.477-10 10s4.477 10 10 10c24.357 0 44.69-17.51 49.102-40.602a69.883 69.883 0 0037.565-17.225c4.116-3.682 4.468-10.004.786-14.12zM116 389c-5.523 0-10 4.477-10 10s4.477 10 10 10c26.636 0 50 24.767 50 53 0 5.523 4.477 10 10 10s10-4.477 10-10c0-39.57-32.056-73-70-73zM196 309c-33.886 0-62.98 18.585-78.3 45.608-2.723 4.805-1.036 10.908 3.768 13.631 4.805 2.723 10.907 1.037 13.631-3.768C147.034 343.415 169.68 329 196 329c5.523 0 10-4.477 10-10s-4.477-10-10-10zM376 266c-13.386 0-24.75-8.815-28.6-20.943C380.593 239.595 406 210.715 406 176c0-5.523-4.478-10-10-10s-10 4.477-10 10c0 27.57-22.43 50-50 50a49.934 49.934 0 01-33.333-12.733c-4.115-3.682-10.438-3.331-14.12.786-3.683 4.116-3.33 10.438.786 14.12a69.886 69.886 0 0037.565 17.225C331.31 268.49 351.643 286 376 286c5.522 0 10-4.477 10-10s-4.478-10-10-10zM396 389c-37.944 0-70 33.43-70 73 0 5.523 4.478 10 10 10s10-4.477 10-10c0-28.233 23.364-53 50-53 5.522 0 10-4.477 10-10s-4.478-10-10-10zM394.3 354.609C379.018 327.65 349.964 309 316 309c-5.522 0-10 4.477-10 10s4.478 10 10 10c26.301 0 48.964 14.411 60.899 35.471 2.727 4.811 8.834 6.489 13.631 3.769 4.805-2.723 6.492-8.826 3.77-13.631z"/>
+		</symbol>
+	</svg>
+	<!-- // brain icon -->	
+
+	<!-- robust icon -->
+	<svg xmlns="http://www.w3.org/2000/svg" role='robust-wcag' focusable="false" style='display:none'>
+		<symbol id = 'robust-icon' viewBox="0 0 396 396">			
+		    <path fill = '#005eb8' d="M390 190.762h-47.635v-48.824a7.5 7.5 0 00-7.5-7.5h-16.932V46.346c0-5.523-4.478-10-10-10H10c-5.523 0-10 4.477-10 10v191.182c0 5.523 4.477 10 10 10h103.467c-1.99 11.434-6.269 30.326-14.881 49.079a10 10 0 009.088 14.174h70.528v26.272a7.5 7.5 0 007.5 7.5h107.975v9.101a6 6 0 006 6H390a6 6 0 006-6V196.762a6 6 0 00-6-6zm-211.798-48.824v85.591H20V56.346h277.934v78.091H185.702a7.501 7.501 0 00-7.5 7.501zm115.475 187.615H193.202v-8.709h59.583v.704c0 4.143 3.357 7.5 7.5 7.5s7.5-3.357 7.5-7.5v-.704h25.892v8.709zm0-132.791v109.082H193.202V149.438h134.163v41.324h-27.688a6 6 0 00-6 6zM384 347.654h-78.323v-7.065h33.162v.597a6 6 0 1012 0v-.597H384v7.065zm0-19.066h-78.323V221.827H384v106.761zm0-118.761h-78.323v-7.065H384v7.065z"/>
+		</symbol>
+	</svg>
+	<!-- // robust icon -->		
+
+	<!-- phone icon -->
+	<svg xmlns="http://www.w3.org/2000/svg" role='responsive design-phone' focusable="false" style='display:none'>
+		<symbol id = 'phone-icon' viewBox="0 0 387.2 387.2">
+			<path fill = '#005eb8' d="M304.8 10.84v-.04A36.64 36.64 0 00278.84 0H108.32C88.067.066 71.666 16.467 71.6 36.72v313.72a36.64 36.64 0 0010.8 25.96 36.642 36.642 0 0025.92 10.8h170.56a36.642 36.642 0 0025.92-10.8 36.642 36.642 0 0010.8-25.92V36.76a36.642 36.642 0 00-10.8-25.92zM193.6 362.28c-5.479 0-9.92-4.441-9.92-9.92s4.441-9.92 9.92-9.92 9.92 4.441 9.92 9.92-4.441 9.92-9.92 9.92zM286.44 300c0 13.255-10.745 24-24 24H124.72c-13.255 0-24-10.745-24-24V66.2c0-13.255 10.745-24 24-24h137.76c13.255 0 24 10.745 24 24l-.04 233.8z"/>
+		</symbol>
+	</svg>
+	<!-- // phone icon -->		
+	
+	<!-- tablet icon -->
+	<svg height="512" width="512" xmlns="http://www.w3.org/2000/svg" role='responsive design-tablet' focusable="false" style='display:none'>
+		<symbol id = 'tablet-icon' viewBox="0 0 512 512">
+			<circle fill = '#005eb8' cx="286" cy="474.5" r="7.5"/>
+			<circle fill = '#005eb8' cx="316" cy="474.5" r="7.5"/>
+			<path fill = '#005eb8' d="M256 467h-60c-4.142 0-7.5 3.357-7.5 7.5s3.358 7.5 7.5 7.5h60c4.142 0 7.5-3.357 7.5-7.5s-3.358-7.5-7.5-7.5z"/>
+			<path fill = '#005eb8' d="M421 0H91C70.322 0 53.5 16.822 53.5 37.5v437c0 20.678 16.822 37.5 37.5 37.5h330c20.678 0 37.5-16.822 37.5-37.5v-437C458.5 16.822 441.678 0 421 0zm22.5 474.5c0 12.406-10.093 22.5-22.5 22.5H91c-12.407 0-22.5-10.094-22.5-22.5v-437C68.5 25.094 78.593 15 91 15h330c12.407 0 22.5 10.094 22.5 22.5z"/>
+			<path fill = '#005eb8' d="M256 75c12.407 0 22.5-10.094 22.5-22.5S268.407 30 256 30s-22.5 10.094-22.5 22.5S243.593 75 256 75zm0-30c4.136 0 7.5 3.364 7.5 7.5S260.136 60 256 60s-7.5-3.364-7.5-7.5 3.364-7.5 7.5-7.5z"/>
+			<path fill = '#005eb8' d="M421 60H304.633c-1.988 0-3.896.79-5.302 2.195-10.516 10.511-16.843 16.818-16.843 16.818C275.397 86.099 265.99 90 256 90c-9.983 0-19.405-3.905-26.517-10.984l-16.82-16.819A7.495 7.495 0 00207.36 60H91a7.5 7.5 0 00-7.5 7.5V241c0 4.143 3.358 7.5 7.5 7.5s7.5-3.357 7.5-7.5V75h105.754l14.635 14.635C228.844 99.543 242.023 105 256 105c13.994 0 27.167-5.46 37.09-15.375.425-.419 14.648-14.625 14.648-14.625H413.5v362h-315V271c0-4.143-3.358-7.5-7.5-7.5s-7.5 3.357-7.5 7.5v173.5A7.5 7.5 0 0091 452h330a7.5 7.5 0 007.5-7.5v-377A7.5 7.5 0 00421 60z"/>
+		</symbol>
+	</svg>
+	<!-- // tablet icon -->		
+
+	<!-- laptop icon -->
+	<svg xmlns="http://www.w3.org/2000/svg" role='responsive design-laptop' focusable="false" style='display:none'>
+		<symbol id = 'laptop-icon' viewBox="0 0 512 512">
+			<path fill = '#005eb8' d="M39.822 59.733v295.822h432.355V59.733H39.822zm392.533 238.933H79.644V99.555h352.711v199.111zM312.889 384v28.444H199.111V384H0v11.378c0 31.289 25.6 56.889 56.889 56.889h398.222c31.289 0 56.889-25.6 56.889-56.889V384H312.889z"/>
+		</symbol>
+	</svg>
+	
+	<!-- // laptop icon -->			
+
+	<!-- Desktop icon -->
+	<svg xmlns="http://www.w3.org/2000/svg" role='responsive design-desktop' focusable="false" style='display:none'>
+		<symbol id = 'desktop-icon' viewBox="0 0 512 512">
+			<path fill = '#005eb8' d="M471.948 18.357H40.052C17.596 18.357 0 35.953 0 58.409v308.402c0 22.456 17.596 40.052 40.052 40.052h431.896c22.456 0 40.052-17.596 40.052-40.052V58.409c0-22.456-17.596-40.052-40.052-40.052zm0 348.454H40.052l-.307-308.375s.094-.027.307-.027h431.896v308.402z"/>
+			<path fill = '#005eb8' d="M235.64 386.837h40.052v86.78H235.64z"/>
+			<path fill = '#005eb8' d="M328.428 453.591H182.905c-11.061 0-20.026 8.965-20.026 20.026s8.965 20.026 20.026 20.026h145.523c11.061 0 20.026-8.965 20.026-20.026s-8.965-20.026-20.026-20.026zM20.026 264.678h471.28v40.052H20.026z"/>
+		</symbol>
+	</svg>
+	<!-- // Desktop icon -->			
+	
+	<!-- conference icon -->
+	<svg xmlns="http://www.w3.org/2000/svg" role='responsive design-conference' focusable="false" style='display:none'>
+		<symbol id = 'conference-icon' viewBox="0 0 512 512">
+			<path fill = '#005eb8' d="M512 391V61H0v330h141v30h-40v30h310v-30h-40v-30h141zm-171 30H171v-30h170v30zM30 361V91h452v270H30z"/>
+		</symbol>
+	</svg>
+	
+	<!-- // conference icon -->			
+		
+
+
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-				<section>Slide 3
-					<section>Slide 3</section>
-					<section>Slide 3</section>
-					<section>Slide 3</section>
+
+				<!-- Section 1 - Intro -->
+				<section class = 'section-slides'>
+						<div class = 'flex-container'>
+							<div>
+								<svg class = 'slide-image'> <use xlink:href ='#nhsuk-logo'> </use>  </svg>
+							</div>
+							<h2>why accessibility is important within web design in the public sector</h2>
+							<p>Presented by Jiten Mehta</p>
+					  </div>
 				</section>
-				<section>Slide 4</section>
-				<section>Slide 5</section>
-				<section>Slide 6</section>
+				<!-- // Section 1 - Intro -->
+
+
+				<!-- Section 2 - Assistive Tech -->
+
+				<section class = 'section-slides'>
+					<section class = 'section-slides'>
+						<div class = 'flex-container'>
+						 <h2>What is web accessibility?</h2>
+						</div>
+					</section>				
+
+					<section class = 'section-slides'>
+						<div class = 'flex-container'>
+							<h2>assistive technology</h2>
+						   </div>
+						<div class = 'image-container'>
+							<svg class = 'animated flipInX  slide-image'> <use xlink:href ='#switch-control'> </use>  </svg>
+							<svg class = 'animated flipInX  slide-image'> <use xlink:href ='#screen-reader'> </use>  </svg>
+							<svg class = 'animated flipInX  slide-image'> <use xlink:href ='#keyboard'> </use>  </svg>
+							<svg class = 'animated flipInX  slide-image'> <use xlink:href ='#colour-contrast'> </use>  </svg>
+						</div>
+					</section>
+				</section>
+				<!-- // Section 2 - Assistive Tech -->
+
+
+				<!-- Section 3 - Semantic HTML -->	
+
+				<section class = 'section-slides'>
+				  <section>	
+					 <div class = 'flex-container'>
+						<h2>Semantic HTML</h2>
+					 </div>
+				  </section>
+				  <section class = 'section-slides semantic-html'>
+					<div class = 'flex-container'>
+						<svg class = 'slide-image'> <use xlink:href ='#cross-icon'> </use>  </svg>
+						<h3>Wrong HTML Semantics</h3>
+					</div>
+<pre>
+<code data-line-numbers="1|4|15|16|32|39">  <div class="header">
+    <div class="container">
+      <h1>My Accessible Blog</h1>
+      <div class="nav">
+        <ul>
+          <a href="#"><li>Home</li></a>
+          <a href="#"><li>About</li></a>
+          <a href="#"><li>Contact</li></a>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="main">
+        <div class="post">
+          <h2>Your First Powerlifting Meet</h2>
+          <h3>Keep Calm and Bring Snacks</h3>
+          <p>Jelly-o wafer chupa chups caramels sweet roll sugar plum candy canes fruitcake marshmallow. Brownie cheesecake donut candy topping chocolate cake brownie. Candy sweet roll gummi bears cupcake gummi bears candy...</p>
+        </div>
+        <div class="post">
+          <h2>Girl Develop It</h2>
+          <h3>Teaching Women to Code Since 2010!</h3>
+          <p>Croissant cotton candy biscuit topping pudding sesame snaps jelly-o soufflé carrot cake. Gummies candy gingerbread dessert apple pie tootsie roll candy macaroon. Liquorice tootsie roll dragée liquorice sweet bear claw lollipop apple pie. Oat cake gummi bears lemon drops cheesecake jelly beans chupa chups chocolate cake carrot cake jelly...</p>
+        </div>
+        <div class="post">
+          <h2>How Many Dogs Should You Adopt?</h2>
+          <h3>Hint: You Can't Have Too Many</h3>
+          <p>Chupa chups jujubes croissant. Muffin gingerbread cupcake jelly beans. Jelly-o topping gummi bears sesame snaps brownie gummi bears pudding sesame snaps cupcake. Gingerbread apple pie lollipop toffee lemon drops wafer danish...</p>
+        </div>
+      </div>
+      <div class="sidebar">
+        <h2>Newsletter</h2>
+        <p>I post about something I love every week! Stay up to date by joining my mailing list!
+        <div class="button">Sign Up Today!</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="container">
+      <p>Find me on social media or contact me via email!</p>
+    </div>
+  </div>
+</code>
+</pre>
+				  </section>
+				  
+				  <section class = 'section-slides semantic-html'>
+					<div class = 'flex-container'>
+						<svg class = 'slide-image'> <use xlink:href ='#check-icon'> </use>  </svg>
+						<h3>Correct HTML Semantics</h3>
+					</div>
+<pre>
+<code data-line-numbers="1|4|15|16|32|39"><header>
+	<div class="container">
+	  <h1>My Accessible Blog</h1>
+	  <nav>
+		<ul>
+		  <a href="#"><li>Home</li></a>
+		  <a href="#"><li>About</li></a>
+		  <a href="#"><li>Contact</li></a>
+		</ul>
+	  </nav>
+	</div>
+  </header>
+  <div class="container">
+	<div class="row">
+	  <main>
+		<article>
+		  <h2>Your First Powerlifting Meet</h2>
+		  <h3>Keep Calm and Bring Snacks</h3>
+		  <p>Jelly-o wafer chupa chups caramels sweet roll sugar plum candy canes fruitcake marshmallow. Brownie cheesecake donut candy topping chocolate cake brownie. Candy sweet roll gummi bears cupcake gummi bears candy...</p>
+	  </article>
+	  <article>
+		  <h2>Girl Develop It</h2>
+		  <h3>Teaching Women to Code Since 2010!</h3>
+		  <p>Croissant cotton candy biscuit topping pudding sesame snaps jelly-o soufflé carrot cake. Gummies candy gingerbread dessert apple pie tootsie roll candy macaroon. Liquorice tootsie roll dragée liquorice sweet bear claw lollipop apple pie. Oat cake gummi bears lemon drops cheesecake jelly beans chupa chups chocolate cake carrot cake jelly...</p>
+	  </article>
+	  <article>
+		  <h2>How Many Dogs Should You Adopt?</h2>
+		  <h3>Hint: You Can't Have Too Many</h3>
+		  <p>Chupa chups jujubes croissant. Muffin gingerbread cupcake jelly beans. Jelly-o topping gummi bears sesame snaps brownie gummi bears pudding sesame snaps cupcake. Gingerbread apple pie lollipop toffee lemon drops wafer danish...</p>
+		</article>
+	  </main>
+	  <aside class="sidebar">
+		<h2>Newsletter</h2>
+		<p>I post about something I love every week! Stay up to date by joining my mailing list!
+		<div class="button">Sign Up Today!</div>
+	  </aside>
+	</div>
+  </div>
+  <footer>
+	<div class="container">
+	  <p>Find me on social media or contact me via email!</p>
+	</div>
+  </footer>
+</code>
+</pre>
+					
+				  </section>
+
+				  <section class = 'section-slides semantic-html'>
+					<div class = 'flex-container'>
+						<h3>WAI-ARIA Roles</h3>
+					</div>
+<pre>
+<code data-line-numbers="1|4|15|32|39"><header role = 'banner'>
+	<div class="container">
+	  <h1>My Accessible Blog</h1>
+	  <nav role = 'navigation'>
+		<ul>
+		  <a href="#"><li>Home</li></a>
+		  <a href="#"><li>About</li></a>
+		  <a href="#"><li>Contact</li></a>
+		</ul>
+	  </nav>
+	</div>
+  </header>
+  <div class="container">
+	<div class="row">
+	  <main role = 'main'>
+		<article>
+		  <h2>Your First Powerlifting Meet</h2>
+		  <h3>Keep Calm and Bring Snacks</h3>
+		  <p>Jelly-o wafer chupa chups caramels sweet roll sugar plum candy canes fruitcake marshmallow. Brownie cheesecake donut candy topping chocolate cake brownie. Candy sweet roll gummi bears cupcake gummi bears candy...</p>
+	  </article>
+	  <article>
+		  <h2>Girl Develop It</h2>
+		  <h3>Teaching Women to Code Since 2010!</h3>
+		  <p>Croissant cotton candy biscuit topping pudding sesame snaps jelly-o soufflé carrot cake. Gummies candy gingerbread dessert apple pie tootsie roll candy macaroon. Liquorice tootsie roll dragée liquorice sweet bear claw lollipop apple pie. Oat cake gummi bears lemon drops cheesecake jelly beans chupa chups chocolate cake carrot cake jelly...</p>
+	  </article>
+	  <article>
+		  <h2>How Many Dogs Should You Adopt?</h2>
+		  <h3>Hint: You Can't Have Too Many</h3>
+		  <p>Chupa chups jujubes croissant. Muffin gingerbread cupcake jelly beans. Jelly-o topping gummi bears sesame snaps brownie gummi bears pudding sesame snaps cupcake. Gingerbread apple pie lollipop toffee lemon drops wafer danish...</p>
+		</article>
+	  </main>
+	  <aside class="sidebar" role = 'complementary'>
+		<h2>Newsletter</h2>
+		<p>I post about something I love every week! Stay up to date by joining my mailing list!
+		<div class="button">Sign Up Today!</div>
+	  </aside>
+	</div>
+  </div>
+  <footer role = 'contentinfo'>
+	<div class="container">
+	  <p>Find me on social media or contact me via email!</p>
+	</div>
+  </footer>
+</code>
+</pre>
+					
+				  </section>
+
+				  
+				</section>
+				<!-- // Section 3 - Semantic HTML -->
+
+				
+				
+				<!-- Section 4 - WACG -->
+				<section class = 'section-slides'>
+						<section>
+							<div class = 'flex-container'>
+								<h2>WCAG</h2>
+							</div>
+						</section>
+						<section>
+							<div class = 'flex-container'>
+								<h3>WCAG 2.0 conformance levels</h3>
+							</div>
+							<div class = 'wcag-level-container'>
+								<div class = 'animated shrinkInBlur level'><h4>Level A</h4></div>
+								<div class = 'animated shrinkInBlur level'><h4>Level AA</h4></div>
+								<div class = 'animated shrinkInBlur level'><h4>Level AAA</h4></div>
+							</div>
+						</section>
+						<section>
+							<div class = 'flex-container'>
+								<h2>WCAG 2.0 principles</h2>
+								</div>
+							<div class = 'image-container'>
+								<svg class = 'animated flipInX  slide-image'> <use xlink:href ='#eye-icon'> </use>  </svg>
+								<svg class = 'animated flipInX  slide-image'> <use xlink:href ='#keyboard'> </use>  </svg>
+								<svg class = 'animated flipInX  slide-image'> <use xlink:href ='#brain-icon'> </use>  </svg>
+								<svg class = 'animated flipInX  slide-image'> <use xlink:href ='#robust-icon'> </use>  </svg>
+							</div>
+						</section>					
+				</section>
+
+				<!-- // Section 4 - WACG -->
+
+
+
+				<section>
+					<section>
+						<div class = 'flex-container'>
+							<h2>responsive design</h2>
+							</div>
+						<div class = 'image-container'>
+							<svg class = 'animated flipInX  slide-image'> <use xlink:href ='#phone-icon'> </use>  </svg>
+							<svg class = 'animated flipInX  slide-image'> <use xlink:href ='#tablet-icon'> </use>  </svg>
+							<svg class = 'animated flipInX  slide-image'> <use xlink:href ='#laptop-icon'> </use>  </svg>
+							<svg class = 'animated flipInX  slide-image'> <use xlink:href ='#desktop-icon'> </use>  </svg>
+							<svg class = 'animated flipInX  slide-image'> <use xlink:href ='#conference-icon'> </use>  </svg>
+						</div>
+					</section>
+
+					<section>
+						<div class = 'flex-container'>
+							<h2>css grid</h2>
+						</div>
+						<div class = 'image-container'>
+							<img src="img\css-grid.gif" alt="css-grid-gif" >
+						</div>
+						<p><a target="_blank" href = 'https://jitenmehta01.github.io/web-dashbaord-app/'><b>Click here to view project</b></a></p>
+					</section>
+
+					<section>
+						<div class = 'flex-container'>
+							<h2>Gestures and Touch</h2>
+						</div>
+						<pre>
+							<code data-line-numbers="2-5"><header role = 'banner'><script>
+const isTouchdevice = 'ontouchstart' in document.documentElement;
+if (isTouchdevice){
+	// touch dependent code goes here
+}
+</script>
+							</code>
+							</pre>
+					</section>
+
+				</section>
+				<section>
+					<section>
+						<div class = 'flex-container'>
+							<h2>Testing for Accessibility</h2>
+						</div>
+					</section>
+
+					<section class = 'manual-testing'>
+						<h2> Manual Testing </h2>
+						<ul>
+							<li class = 'animated bounceInLeft fast'>Tab through yourself to see if elements have focus</li>
+							<li class = 'animated bounceInLeft fast'>Use assistive technology like screen readers </li>
+							<li class = 'animated bounceInLeft fast'>User testing! Get other people to test web-page/app.</li>
+						</ul>
+					</section>
+
+					<section class = 'manual-testing'>
+						<h2> Browser Testing </h2>
+						<ul>
+							<li class = 'animated bounceInLeft fast' >Test colour blindness through the spectrum plugin</li>
+							<li class = 'animated bounceInLeft fast'>Chrome Accessibility Developer Tools.</li>
+						</ul>
+					</section>
+
+					<section class = 'manual-testing'>
+						<h2> Automatic Testing </h2>
+						<ul>
+							<li class = 'animated bounceInLeft fast'>Use task runner's like Gulp or Grunt</li>
+							<li class = 'animated bounceInLeft fast'>Professional usability testing</li>
+						</ul>
+					</section>
+				</section>	
+
+				<section class = 'manual-testing'>
+					<h2> Summary </h2>
+					<ul>
+						<li class = 'animated bounceInLeft fast'>Assistive technologies</li>
+						<li class = 'animated bounceInLeft fast'>Correct Semantic HTML</li>
+						<li class = 'animated bounceInLeft fast'>Abiding by the WCAG principles </li>
+						<li class = 'animated bounceInLeft fast'>Testing for accessibility </li>
+					</ul>
+				</section>	
+
+				<section class = 'manual-testing'>
+					<h2> THANK YOU</h2>
+				</section>	
 			</div>
 		</div>
 
@@ -33,6 +508,7 @@
 		<script src="plugin/notes/notes.js"></script>
 		<script src="plugin/markdown/markdown.js"></script>
 		<script src="plugin/highlight/highlight.js"></script>
+		<script src = 'plugin\appearance\plugin\appearance\appearance.js'></script>
 		<script>
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
@@ -41,7 +517,7 @@
 				hash: true,
 
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, Appearance ]
 			});
 		</script>
 	</body>
