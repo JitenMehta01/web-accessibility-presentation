@@ -197,10 +197,18 @@
 							<h2>assistive technology</h2>
 						   </div>
 						<div class = 'image-container'>
-							<svg class = 'animated flipInX  slide-image'> <use xlink:href ='#switch-control'> </use>  </svg>
-							<svg class = 'animated flipInX  slide-image'> <use xlink:href ='#screen-reader'> </use>  </svg>
-							<svg class = 'animated flipInX  slide-image'> <use xlink:href ='#keyboard'> </use>  </svg>
-							<svg class = 'animated flipInX  slide-image'> <use xlink:href ='#colour-contrast'> </use>  </svg>
+							<div  class = 'animated flipInX  slide-image icon-div'>
+							<svg> <use xlink:href ='#switch-control'> </use>  </svg>
+							<p>Switch Controls</p>
+							</div>
+							<div  class = 'animated flipInX  slide-image icon-div'>
+							<svg> <use xlink:href ='#screen-reader'> </use>  </svg>
+							<p>Screen Readers</p>
+							</div>
+							<div  class = 'animated flipInX  slide-image icon-div'>
+							<svg> <use xlink:href ='#keyboard'> </use>  </svg>
+							<p>Keyboard</p>
+							</div>
 						</div>
 					</section>
 				</section>
@@ -322,6 +330,19 @@
 					
 				  </section>
 
+				  <section class = 'section-slides'>
+						<div class = 'flex-container'>
+							<h2>WAI-ARIA ROLES</h2>
+						</div>
+						<div class = 'waiariaroles-container'>
+							<div class = 'animated shrinkInBlur icon-div'><h6>Landmark</h6></div>
+							<div class = 'animated shrinkInBlur icon-div'><h6>Document</h6></div>
+							<div class = 'animated shrinkInBlur icon-div'><h6>Widget</h6></div>
+							<div class = 'animated shrinkInBlur icon-div'><h6>Abstract</h6></div>
+						</div>			
+				</section>
+
+
 				  <section class = 'section-slides semantic-html'>
 					<div class = 'flex-container'>
 						<h3>WAI-ARIA Roles</h3>
@@ -390,6 +411,29 @@
 						</section>
 						<section>
 							<div class = 'flex-container'>
+								<h2>WCAG 2.0 principles</h2>
+								</div>
+							<div class = 'image-container'>
+								<div class = 'animated flipInX  slide-image'>
+								<svg> <use xlink:href ='#eye-icon'> </use>  </svg>
+								<p>Perceivable</p>
+								</div>	
+								<div class = 'animated flipInX  slide-image'>
+								<svg> <use xlink:href ='#keyboard'> </use>  </svg>
+								<p>Operable</p>
+								</div>
+								<div class = 'animated flipInX  slide-image'>
+								<svg> <use xlink:href ='#brain-icon'> </use>  </svg>
+								<p>Understandable</p>
+								</div>
+								<div class = 'animated flipInX  slide-image'>
+								<svg> <use xlink:href ='#robust-icon'> </use>  </svg>
+								<p>Robust</p>
+								</div>
+							</div>
+						</section>	
+						<section>
+							<div class = 'flex-container'>
 								<h3>WCAG 2.0 conformance levels</h3>
 							</div>
 							<div class = 'wcag-level-container'>
@@ -397,18 +441,7 @@
 								<div class = 'animated shrinkInBlur level'><h4>Level AA</h4></div>
 								<div class = 'animated shrinkInBlur level'><h4>Level AAA</h4></div>
 							</div>
-						</section>
-						<section>
-							<div class = 'flex-container'>
-								<h2>WCAG 2.0 principles</h2>
-								</div>
-							<div class = 'image-container'>
-								<svg class = 'animated flipInX  slide-image'> <use xlink:href ='#eye-icon'> </use>  </svg>
-								<svg class = 'animated flipInX  slide-image'> <use xlink:href ='#keyboard'> </use>  </svg>
-								<svg class = 'animated flipInX  slide-image'> <use xlink:href ='#brain-icon'> </use>  </svg>
-								<svg class = 'animated flipInX  slide-image'> <use xlink:href ='#robust-icon'> </use>  </svg>
-							</div>
-						</section>					
+						</section>				
 				</section>
 
 				<!-- // Section 4 - WACG -->
@@ -480,7 +513,7 @@ if (isTouchdevice){
 					</section>
 
 					<section class = 'manual-testing'>
-						<h2> Automatic Testing </h2>
+						<h2> Automated Testing </h2>
 						<ul>
 							<li class = 'animated bounceInLeft fast'>Use task runner's like Gulp or Grunt</li>
 							<li class = 'animated bounceInLeft fast'>Professional usability testing</li>
